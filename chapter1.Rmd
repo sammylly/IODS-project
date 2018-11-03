@@ -5,4 +5,10 @@
 
 The instructor of my doctoral thesis (in sosiology) advised me to participate in this IODS course. The point for me ist to learn R, but it seems that also GitHub has to be learned. So far I am totally unfamiliar with both of them.
 
-Installation of R, RStudio and GitHub is done. I can see green checkmark and the text "Your site is published at https://sammylly.github.io/IODS-project/  " I guess this means that my course diary is working.
+Installation of R, RStudio and GitHub is done.
+
+Link to my github repository: https://github.com/sammylly/IODS-project
+
+Link to my course diary https://sammylly.github.io/IODS-project/  
+
+(I can see green checkmark and the text "Your site is published... but I cannot see any changes after one hours waiting...) 

@@ -1,0 +1,5 @@
+output: github_document
+
+This first week has been a information overload for a computer Neanderthaler like my.
+
+https://sammylly.github.io/IODS-project/

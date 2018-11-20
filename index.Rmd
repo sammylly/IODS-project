@@ -12,6 +12,7 @@ output:
     code_folding: hide
 ---
 'TESTI
+pnorm(15, 15, 3.2)
 
 ***
   
@@ -24,3 +25,12 @@ output:
 ```
 
 ***
+pnorm(15, 15, 3.2)
+fact(20)
+
+  
+```{r child = "chapter4.Rmd"}
+```
+
+***
+

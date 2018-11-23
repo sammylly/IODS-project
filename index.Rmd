@@ -33,4 +33,5 @@ fact(20)
 ```
 
 ***
-aaa
+
+Boston data has 14 columns (variables) and 506 rows (cases)

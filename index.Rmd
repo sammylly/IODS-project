@@ -34,4 +34,54 @@ fact(20)
 
 ***
 
+Task 2:
+
 Boston data has 14 columns (variables) and 506 rows (cases)
+
+
+Task 3:
+
+Visualizations don't show up in my GitHub. (What do I do wrong?)
+
+Task 4:
+
+Standardization changes variables so that mean = 0 and sd is constant, so variables are easy to use in many statistical analyzis. 
+
+
+      crim                 zn               indus        
+ Min.   :-0.419367   Min.   :-0.48724   Min.   :-1.5563  
+ 1st Qu.:-0.410563   1st Qu.:-0.48724   1st Qu.:-0.8668  
+ Median :-0.390280   Median :-0.48724   Median :-0.2109  
+ Mean   : 0.000000   Mean   : 0.00000   Mean   : 0.0000  
+ 3rd Qu.: 0.007389   3rd Qu.: 0.04872   3rd Qu.: 1.0150  
+ Max.   : 9.924110   Max.   : 3.80047   Max.   : 2.4202  
+      chas              nox                rm         
+ Min.   :-0.2723   Min.   :-1.4644   Min.   :-3.8764  
+ 1st Qu.:-0.2723   1st Qu.:-0.9121   1st Qu.:-0.5681  
+ Median :-0.2723   Median :-0.1441   Median :-0.1084  
+ Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.:-0.2723   3rd Qu.: 0.5981   3rd Qu.: 0.4823  
+ Max.   : 3.6648   Max.   : 2.7296   Max.   : 3.5515  
+      age               dis               rad         
+ Min.   :-2.3331   Min.   :-1.2658   Min.   :-0.9819  
+ 1st Qu.:-0.8366   1st Qu.:-0.8049   1st Qu.:-0.6373  
+ Median : 0.3171   Median :-0.2790   Median :-0.5225  
+ Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 0.9059   3rd Qu.: 0.6617   3rd Qu.: 1.6596  
+ Max.   : 1.1164   Max.   : 3.9566   Max.   : 1.6596  
+      tax             ptratio            black        
+ Min.   :-1.3127   Min.   :-2.7047   Min.   :-3.9033  
+ 1st Qu.:-0.7668   1st Qu.:-0.4876   1st Qu.: 0.2049  
+ Median :-0.4642   Median : 0.2746   Median : 0.3808  
+ Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 1.5294   3rd Qu.: 0.8058   3rd Qu.: 0.4332  
+ Max.   : 1.7964   Max.   : 1.6372   Max.   : 0.4406  
+     lstat              medv        
+ Min.   :-1.5296   Min.   :-1.9063  
+ 1st Qu.:-0.7986   1st Qu.:-0.5989  
+ Median :-0.1811   Median :-0.1449  
+ Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 0.6024   3rd Qu.: 0.2683  
+ Max.   : 3.5453   Max.   : 2.9865  
+
+

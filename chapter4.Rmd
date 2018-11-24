@@ -58,6 +58,42 @@ pairs(Boston)
 ```
 ```{r}
 cor_matrix<-cor(Boston)
+cor_matrix<-cor(Boston) %>% round(digits = 2)
 cor_matrix
 ```
+
+```{r}
+corrplot(cor_matrix)
+```
+
+```{r}
+cor(Boston)
+cor_matrix<-cor(Boston)
+```
+
+```{r}
+library(corrplot)
+```
+
+```{r}
+boston_scaled <- scale
+summary(boston_scaled)
+
+```
+ask 2:
+
+Boston data has 14 columns (variables) and 506 rows (cases)
+
+
+Task 3:
+
+Visualizations don't show up in my GitHub. (What do I do wrong?)
+
+
+
+Task 4:
+
+Standardization changes variables so that mean = 0 and sd is constant, so variables are easy to use in many statistical analyzis. 
+
+
 

@@ -56,4 +56,8 @@ summary(Boston)
 ```{r}
 pairs(Boston)
 ```
+```{r}
+cor_matrix<-cor(Boston)
+cor_matrix
+```
 

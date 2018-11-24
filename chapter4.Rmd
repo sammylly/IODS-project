@@ -53,4 +53,7 @@ pairs(Boston)
 str(Boston)
 summary(Boston)
 ```
+```{r}
+pairs(Boston)
+```
 

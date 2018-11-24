@@ -48,3 +48,9 @@ dim(boston)
 dim(Boston)
 ```
 Boston data has 506 rows and 14 columns
+```{r}
+pairs(Boston)
+str(Boston)
+summary(Boston)
+```
+

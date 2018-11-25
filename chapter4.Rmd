@@ -9,81 +9,19 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+## CHAPTER 4
 
-You can also embed plots, for example:
+I followed all the steps of DataCamp excercise, trying to repeat the same procedures in RStudio. Some of them worked well, but, as you can see, some of them didn't. For example: I couldn't get any graphics visible in GitHub. Instead I kept on receiving following emails:
 
-```{r pressure, echo=TRUE}
-plot(pressure)
-```
+"The page build failed for the `master` branch with the following error: The file `chapter4.Rmd` is not properly UTF-8 encoded."
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-```{r}
-library(MASS)
-TES<-Boston
-str(Boston)
-summary(Boston)
-```
+Anyway, I listed some of my practises even though they weren't always very succesful. Keep on working...
 
-```{r}
-cor_matrix<-cor(Boston)
-```
-
-djäfjeifjei
-```{r}
-cor_matrix
-```
-dim(boston)
-```{r}
-dim(Boston)
-```
-Boston data has 506 rows and 14 columns
-```{r}
-pairs(Boston)
-str(Boston)
-summary(Boston)
-```
-```{r}
-pairs(Boston)
-```
-```{r}
-cor_matrix<-cor(Boston)
-cor_matrix<-cor(Boston) %>% round(digits = 2)
-cor_matrix
-```
-
-```{r}
-corrplot(cor_matrix)
-```
-
-```{r}
-cor(Boston)
-cor_matrix<-cor(Boston)
-```
-
-```{r}
-library(corrplot)
-```
-
-```{r}
-boston_scaled <- scale
-summary(boston_scaled)
-boston_scaled <- as.data.frame(boston_scaled)
-summary(boston_scaled)
-summary(boston_scaled_$crim)
-
-```
-ask 2:
+Task 2:
 
 Boston data has 14 columns (variables) and 506 rows (cases)
 
@@ -146,91 +84,4 @@ Error in summary(Boston) : object 'Boston' not found
 
 "
 
- 
-```{r}
-crime <- cut(boston_scaled)
-```
- 
-```{r}
-lda.fit <- lda(crime ~ ., data = train)
-lda.fit
-```
-
-
-
-```{r}
-
-```
-
-```{r}
-summary(boston_scaled$crim)
-```
-
-```{r}
-
-```
-
-```{r}
-Boston
-boston_scaled <- scale (Boston)
-summary (boston_scaled)
-class(boston_scaled)
-boston_scaled <- as.data.frame(boston_scaled)
-summary(boston_scaled$crim)
-
-```
-
-```{r}
-bins <- quantile(boston_scaled$crim)
-bins
-```
-
-```{r}
-crime <- cut(boston_scaled$crim, breaks = bins, include.lowest = TRUE, labels = c("low", "med_low", "med_high", "high" ) )
-```
-```{r}
-table(crime)
-```
-
-```{r}
-boston_scaled <- dplyr::select(boston_scaled, -crim)
-
-```
-
-```{r}
-crime
-```
-
-```{r}
-n <- nrow(boston_scaled)
-n
-ind <-sample(n, size = n * 0.8)
-train <- boston_scaled[ind,]
-test <- boston_scaled[-ind,]
-nrow(test)
-nrow(train)
-lda.fit <- lda(crim ~ ., data = train)
-lda.fit
-
-{r lda.fit, echo=FALSE}
-plot(lda.fit, dim = 2) 
-
-```
-
-```{r}
-
-```
-
-```{r}
-predict(lda.fit, newdata = test)
-lda.pred$class
-table(correct = correct_classes, predicted = lda.pred$class)
-```
-
-```{r}
-library(MASS)
-TES<-Boston
-str(Boston)
-summary(Boston)
-```
 

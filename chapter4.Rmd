@@ -95,7 +95,7 @@ Visualizations don't show up in my GitHub. (What do I do wrong?)
 
 Task 4:
 
-Standardization changes variables so that mean = 0 and sd is constant, so variables are easy to use in many statistical analyzis. 
+Standardization changes variables so that mean = 0 and sd is constant, so variables are easy to use in many statistical analyzis, such as LDA. 
 
 Print of the quantile -function:
 
@@ -117,6 +117,10 @@ Number of rows in train set: 404
 crime <- cut(boston_scaled)
 ```
  
+```{r}
+lda.fit <- lda(crime ~ ., data = train)
+lda.fit
+```
 
 
 
@@ -160,7 +164,7 @@ boston_scaled <- dplyr::select(boston_scaled, -crim)
 ```
 
 ```{r}
-
+crime
 ```
 
 ```{r}
@@ -171,5 +175,10 @@ train <- boston_scaled[ind,]
 test <- boston_scaled[-ind,]
 nrow(test)
 nrow(train)
+lda.fit <- lda(crim ~ ., data = train)
+lda.fit
+	
+plot(lda.fit, dim = 2)
+
 ```
 

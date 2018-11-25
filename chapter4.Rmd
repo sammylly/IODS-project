@@ -23,7 +23,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=TRUE}
 plot(pressure)
 ```
 
@@ -127,6 +127,25 @@ plot(lda.fit, dim = 2)
 
 I can see graphics in R, but not in GitHub, where's the problem?
 
+Task 6:
+
+I didn't figure out how to: "Save the crime categories from the test set and then remove the categorical crime variable from the test dataset." Without that the cross tabulation didn't work.
+
+lda.pred <- predict(lda.fit, newdata = test)
+table(correct = correct_classes, predicted = lda.pred$class)
+
+DataCamp cross tabulation has 73 correct prediction out of 94, which means about 78 percent.
+
+
+
+Task 7:
+
+The first step would have been "Reload the Boston dataset", but I couldn't do it.
+
+Error in summary(Boston) : object 'Boston' not found
+
+"
+
  
 ```{r}
 crime <- cut(boston_scaled)
@@ -192,8 +211,26 @@ nrow(test)
 nrow(train)
 lda.fit <- lda(crim ~ ., data = train)
 lda.fit
-	
-plot(lda.fit, dim = 2. col = classes, pch = classes) 
 
+{r lda.fit, echo=FALSE}
+plot(lda.fit, dim = 2) 
+
+```
+
+```{r}
+
+```
+
+```{r}
+predict(lda.fit, newdata = test)
+lda.pred$class
+table(correct = correct_classes, predicted = lda.pred$class)
+```
+
+```{r}
+library(MASS)
+TES<-Boston
+str(Boston)
+summary(Boston)
 ```
 

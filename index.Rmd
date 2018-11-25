@@ -34,6 +34,8 @@ fact(20)
 
 ***
 
+CHAPTER 4
+
 Task 2:
 
 Boston data has 14 columns (variables) and 506 rows (cases)
@@ -42,6 +44,8 @@ Boston data has 14 columns (variables) and 506 rows (cases)
 Task 3:
 
 Visualizations don't show up in my GitHub. (What do I do wrong?)
+
+
 
 Task 4:
 
@@ -84,4 +88,46 @@ Standardization changes variables so that mean = 0 and sd is constant, so variab
  3rd Qu.: 0.6024   3rd Qu.: 0.2683  
  Max.   : 3.5453   Max.   : 2.9865  
 
+
+
+
+Print of the quantile -function:
+
+          0%          25%          50% 
+-0.419366929 -0.410563278 -0.390280295 
+         75%         100% 
+ 0.007389247  9.924109610 
+ 
+ Table of the new factor crime:
+ 
+ crime
+     low  med_low med_high     high 
+     127      126      126      127 
+
+Number of rows in train set: 404
+
+
+Task 5:
+
+n <- nrow(boston_scaled)
+n
+ind <-sample(n, size = n * 0.8)
+train <- boston_scaled[ind,]
+test <- boston_scaled[-ind,]
+nrow(test)
+nrow(train)
+lda.fit <- lda(crim ~ ., data = train)
+lda.fit
+plot(lda.fit, dim = 2) 
+
+I can see graphics in R, but not in GitHub, where's the problem?
+
+Task 6:
+
+I didn't figure out how to: "Save the crime categories from the test set and then remove the categorical crime variable from the test dataset." Without that the cross tabulation didn't work.
+
+lda.pred <- predict(lda.fit, newdata = test)
+table(correct = correct_classes, predicted = lda.pred$class)
+
+DataCamp cross tabulation has 73 correct prediction out of 94, which means about 78 percent.
 

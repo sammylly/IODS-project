@@ -78,6 +78,9 @@ library(corrplot)
 ```{r}
 boston_scaled <- scale
 summary(boston_scaled)
+boston_scaled <- as.data.frame(boston_scaled)
+summary(boston_scaled)
+summary(boston_scaled_$crim)
 
 ```
 ask 2:
@@ -90,10 +93,83 @@ Task 3:
 Visualizations don't show up in my GitHub. (What do I do wrong?)
 
 
-
 Task 4:
 
 Standardization changes variables so that mean = 0 and sd is constant, so variables are easy to use in many statistical analyzis. 
 
+Print of the quantile -function:
 
+          0%          25%          50% 
+-0.419366929 -0.410563278 -0.390280295 
+         75%         100% 
+ 0.007389247  9.924109610 
+ 
+ Table of the new factor crime:
+ 
+ crime
+     low  med_low med_high     high 
+     127      126      126      127 
+
+Number of rows in train set: 404
+
+ 
+```{r}
+crime <- cut(boston_scaled)
+```
+ 
+
+
+
+```{r}
+
+```
+
+```{r}
+summary(boston_scaled$crim)
+```
+
+```{r}
+
+```
+
+```{r}
+Boston
+boston_scaled <- scale (Boston)
+summary (boston_scaled)
+class(boston_scaled)
+boston_scaled <- as.data.frame(boston_scaled)
+summary(boston_scaled$crim)
+
+```
+
+```{r}
+bins <- quantile(boston_scaled$crim)
+bins
+```
+
+```{r}
+crime <- cut(boston_scaled$crim, breaks = bins, include.lowest = TRUE, labels = c("low", "med_low", "med_high", "high" ) )
+```
+```{r}
+table(crime)
+```
+
+```{r}
+boston_scaled <- dplyr::select(boston_scaled, -crim)
+
+```
+
+```{r}
+
+```
+
+```{r}
+n <- nrow(boston_scaled)
+n
+ind <-sample(n, size = n * 0.8)
+train <- boston_scaled[ind,]
+test <- boston_scaled[-ind,]
+nrow(test)
+nrow(train)
+```
 

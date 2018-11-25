@@ -112,6 +112,21 @@ Print of the quantile -function:
 
 Number of rows in train set: 404
 
+Task 5:
+
+n <- nrow(boston_scaled)
+n
+ind <-sample(n, size = n * 0.8)
+train <- boston_scaled[ind,]
+test <- boston_scaled[-ind,]
+nrow(test)
+nrow(train)
+lda.fit <- lda(crim ~ ., data = train)
+lda.fit
+plot(lda.fit, dim = 2) 
+
+I can see graphics in R, but not in GitHub, where's the problem?
+
  
 ```{r}
 crime <- cut(boston_scaled)
@@ -178,7 +193,7 @@ nrow(train)
 lda.fit <- lda(crim ~ ., data = train)
 lda.fit
 	
-plot(lda.fit, dim = 2)
+plot(lda.fit, dim = 2. col = classes, pch = classes) 
 
 ```
 
